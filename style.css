@@ -1,0 +1,521 @@
+/*Style generaux*/
+
+body{
+    font-family: "Comic sans MS", Comic Sans, cursive;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    font-family: "Comic sans MS", Comic Sans, cursive;
+}
+
+
+/*Barre de navigation*/
+.header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    height: auto;
+    right: 0px;
+    left: 0px;
+    top: 0;
+    justify-content: space-evenly;
+    padding: 20px;
+    background:#d8c8b4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    flex: 1;
+    display: flex;
+    justify-content: center; /*le logo est au centre de la boite "logo" */
+}
+
+#logo{
+    border: 2px solid black;
+    width: 100%;
+    max-width: 100px;
+}
+
+/* Menu Hamburger */
+.menu-toggle {
+    display: none; /* Bouton masqué par défaut sur les grands écrans */
+    background: none; /* Pas de fond */
+    border: none; /* Pas de bordures */
+    font-size: 1.5rem; /* Taille du bouton pour qu'il soit bien visible */
+    color: #fff; /* Couleur blanche pour le bouton */
+    cursor: pointer; /* Change le curseur au survol */
+    flex: 1;
+}
+
+
+.navigation{
+    flex: 4;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    
+}
+
+.main-menu{
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/*les boutons du top menu*/
+.top-menu{
+    border:none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    font-size: 1.5rem;
+    /*couleur et ecriture*/
+}
+
+.top-menu:hover{
+    color: #555; /* Fond gris au survol */
+}
+
+.commande{
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+/*
+#commander{
+    border: 2px solid black;
+    background: pink;
+    margin: 10px;
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#commander:hover{
+    background: palevioletred;
+}
+*/
+#commander{
+    font-size: larger;
+    color: #598c59;
+    background: #88db8d;
+    cursor: pointer;
+    transform: scale(1.7);
+    border: none;
+    margin: 10px;
+    padding: 10px;
+}
+h2 p {
+    text-indent: 5%;
+}
+#commander:hover{
+    color: #598c59;
+    border: 2px solid #88db8d;
+    background: #88db8d;
+}
+
+
+/*La photo d'entrée*/
+/*
+element.style{
+    background-image: url(images/hero.png;);
+}
+*/
+
+.hero{
+    position: relative;
+    height: calc(100vh - 160px); /*peut mettre 150px pour qu'elle soit un peut en dessous*/
+    margin-top: 160px;
+    width:100%;
+    background: url(images/hero.png) no-repeat center center/cover;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    
+}
+
+.hero-content{
+    line-height: 400%;
+    color: white;
+    text-shadow: 1px 1px 2px #598c59;
+}
+
+/* faire brand name... avec la meme police*/
+.brand-name{
+    font-family: 'Cagliostro', sans-serif;
+    font-weight: bold;
+    line-height: 70%;
+}
+
+.name-brand{
+    font-size: 350%;
+}
+
+#type-cuisine{
+    font-stretch: expanded;
+}
+
+/*Partie intro de la page*/
+.intro, .menu{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+p{
+    text-align: start; 
+    /*font-size: small;*/
+    font-weight: normal; /*ou lighter*/
+    width: 100%;
+}
+
+#sep1{
+    width: 100%;
+    height: calc(100vh / 4);
+    object-fit: cover;
+    margin: 10px;
+}
+
+/*Menu*/
+.grille-menu{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 40px;
+}
+
+.product{
+    display: flex;
+    justify-content: space-between;
+}
+
+.food{
+    border: 1px solid #598c59;
+    padding: 10px;
+    margin: 10px;
+    line-height: 300%;
+}
+
+.name-food{
+    font-size: larger;
+    text-align: left;
+    font-weight: bold;
+}
+.price-food{
+    font-size: larger;
+    text-align: right;
+    font-weight: bold;
+}
+
+.description-food{
+    font-size: smaller;
+    text-align: left;
+    line-height: 90%;
+    color:#555;
+}
+
+.menu-button-content{
+    /*padding: 20px;*/
+    margin: 20px;
+}
+
+.button-menu, .button-menu-pdf{
+    font-size: larger;
+    color: #88db8d;
+    background: #598c59;
+    cursor: pointer;
+    transform: scale(1.7);
+    border: none;
+    margin: 10px;
+    padding: 10px;
+}
+
+.button-menu:hover, .button-menu-pdf:hover{
+    color: #598c59;
+    border: 2px solid #598c59;
+    background: none;
+}
+
+/*FOOTER*/
+.footer{
+    background:grey;
+}
+
+.divider{
+    background-color:#598c59;
+
+}
+.info-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.Contact .Commander{
+    padding: 20px;
+    margin: 20px;
+}
+
+.footer-list{
+    list-style-type: none;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.footer-list-element a{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.footer-list-element{
+    line-height: 70%;
+}
+
+a svg {
+    color: #88db8d;
+    size: smaller;
+    border: 1px solid #598c59;
+}
+
+a svg:hover {
+    color: #598c59;
+    size: smaller;
+    border: 1px solid #88db8d;
+}
+
+
+#cpright{
+    text-align: center;
+}
+
+/*INFO Pratiques */
+.info{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin: 20px;
+}
+
+.horaire{
+    border: 1px solid #598c59;
+    padding: 20px;
+}
+.horaire-description{
+    display: flex;
+    justify-content: space-between;
+}
+
+.jour, .heure{
+    margin: 0 20px;
+}
+
+/*PAGE MENU !!!!!!!!!!!!!!!!!!*/
+
+.title-page{
+    font-size: 6rem;;
+}
+
+.menu-choice-list{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.carte-et-menu{
+    border: 2px solid #598c59;
+}
+
+.menu-part{
+    margin: 30px 0 0 0;
+}
+#carte-content, #dessert-content, #boisson-content, #menu-content {
+    padding-top: 160px; /* Ajuste cette valeur selon la hauteur de ta barre de navigation */
+    margin-top: -160px; /* Retirer l'espace ajouté par le padding */
+  }
+  
+.divider-menu{
+    width:25%;
+    height: 3px;
+    background-color: #598c59;
+    margin: 20px auto;
+    border: none;
+}
+
+.tab-button{
+    color:#555;
+    text-decoration: none;
+}
+
+.buttons-menu{
+    padding: 0 30vw; /*changer pour media*/
+    display: grid;
+}
+
+
+.button-menu-pdf{
+    transform: scale(1.05);
+}
+
+
+
+/*PHOTOS PAGES DES PHOTOS*/
+
+.photos{
+    border: 1px solid #598c59;
+    padding: 10px;
+    margin: 10px;
+    line-height: 300%;
+}
+
+.photos-img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*PAGES DES COMMANDES*/
+.plateforme{
+    margin: 40px;
+}
+
+.plateforme #commander{
+    width:70%;
+}
+
+
+/*PAGES CONTACT*/
+.contacter{
+    display: flex;
+    justify-content: space-evenly ;
+    padding: 20px;
+    margin: 40px;
+    border: 1px solid #88db8d;
+}
+
+.contact-main{
+    text-align: center;
+}
+
+.contacter p{
+    text-align: center;
+    font-size: smaller;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.input-message, .button-form, .form h1, .form p{
+    grid-column: 1 / 3;
+}
+
+.form h1{
+    margin: 20px 0 0 0;
+}
+
+.input-message, .input-presentation, .button-form{
+    border: 1.5px solid #598c59;
+}
+
+input, textarea{
+    border: none;
+    background-color: #fff;
+    font-family: 'Comic sans MS', cursive;
+    width:98%;
+}
+
+.button-form input{
+    background-color: #88db8d;
+    color: #598c59;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.button-form input:hover{
+    background-color: #598c59;
+    color: #88db8d;
+    
+}
+
+#message-retour{
+    display: none;
+    text-align: center;
+    
+}
+
+@media (max-width: 768px) {
+
+    /*Navigation*/
+    .header{
+        width: 100vw;
+    }
+
+    .main-menu {
+        display: none;  /* Cacher le menu par défaut */
+        flex-direction: column;
+        background: #d8c8b4;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    header .commande{
+       display: flex;
+       justify-content: flex-start;
+       padding: 20px;
+    }
+
+    .main-menu.active{
+        display: flex; /* Afficher le menu quand il est activé */
+    }
+
+    .logo{
+        justify-content: space-around;
+    }
+
+    .menu-toggle {
+        display: block; /* Afficher le bouton hamburger */
+        font-size: 50px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    /*Menu*/
+    .grille-menu, .info-footer{
+        grid-template-columns: 100%;
+    }
+    .info{
+        display: block;
+        grid-template-columns: 100%;
+    }
+
+    .horaire{
+        margin: 20px 0;
+    }
+    .button-menu-pdf{
+        transform: scale(1.35);
+    }
+}
+
+
+/*FAIRE EN SORTE DE POUVOIR CHANGER FACILEMENT LES TITRES...*/
+/*RAJOUTER INFO*/
+
+
